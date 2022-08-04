@@ -69,14 +69,13 @@
           </div>
         </div>
         <ul class="list-group m-2" style="overflow-y: scroll;height:400px;">
-          <div v-for="(todo,index) in stationData" :key="todo.stationuuid" @click="stationId=index">
+          <div v-for="(todo,index) in stationData" :key="todo.name" @click="stationId=index">
             <li :class="['list-group-item',stationId==index?'active':'']"
               v-if="todo.name.toLowerCase().includes(searchText)||isNotSearched">
               {{ todo.name }}
             </li>
           </div>
         </ul>
-        <h1>{{this.searchText}}</h1>
       </div>
     </div>
   </div>

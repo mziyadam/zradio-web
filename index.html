@@ -13,7 +13,6 @@
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
 </head>
 <script src="https://unpkg.com/vue@3"></script>
 <style>
@@ -47,7 +46,9 @@
     <hr>
     <div class="row w-100">
       <div class="col-md-6 text-center">
-        <p v-if="!stationData">Loading...</p>
+        <p v-if="!stationData">
+          <img class="text-center" src="https://i.stack.imgur.com/hzk6C.gif" alt="">
+        </p>
         <pre v-else>
         <div class="d-flex justify-content-center">
           <img class="img-fluid " style="max-height:256px;" :src=(''+stationData[stationId].favicon==''?'https://cdn-icons-png.flaticon.com/256/186/186054.png':stationData[stationId].favicon)></img>
